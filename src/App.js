@@ -1,23 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import Counter from "./Components/Counter";
+import FetchDelete from "./Components/FetchDelete";
+import Filter from "./Components/Filter";
+import Quotes from "./Components/Quotes";
+import "./index.css";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="font-mono flex flex-wrap flex-col h-screen bg-gray-300">
+      <div className="flex flex-none h-72 w-screen justify-evenly items-center ">
+        <FetchDelete></FetchDelete>
+
+        <Filter></Filter>
+
+        <Counter></Counter>
+      </div>
+      <div className="pt-5 flex flex-row flex-1 bg-gray-200 overflow-y-auto">
+        <Quotes></Quotes>
+      </div>
     </div>
   );
 }
