@@ -2,8 +2,8 @@ import Quote from "./Quote";
 import useQuotes from "../UseQuotes";
 
 const Quotes = () => {
-  const { filteredQuotes } = useQuotes();
-  if (filteredQuotes.length > 0) {
+  const { filteredQuotes, totalFamount } = useQuotes();
+  if (totalFamount > 0) {
     return (
       <div className="w-full flex flex-row">
         <div className="flex flex-col text-2xl w-3/4 ml-4 space-y-4">
